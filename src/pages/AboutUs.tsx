@@ -29,7 +29,6 @@ const AboutUs: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-16 bg-teal-100">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-semibold text-teal-600 mb-4">

@@ -37,7 +37,6 @@ export const ChangePassword = () => {
     const finial = { ...data, email };
 
     setPassword(finial);
-    // Handle form submission (e.g., API call to update password)
   };
 
   useEffect(() => {
@@ -53,7 +52,6 @@ export const ChangePassword = () => {
       <div className="w-full md:w-[60%] lg:w-[40%] mx-auto">
         <p>{isLoading ? "Loading......" : ""}</p>
         <form className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
-          {/* Current Password */}
           <div>
             <label htmlFor="currentPass">Current Password</label>
             <div className="relative">
@@ -77,7 +75,6 @@ export const ChangePassword = () => {
             )}
           </div>
 
-          {/* New Password */}
           <div>
             <label htmlFor="newPass">New Password</label>
             <div className="relative">
@@ -101,7 +98,6 @@ export const ChangePassword = () => {
             )}
           </div>
 
-          {/* Re-type Password */}
           <div>
             <label htmlFor="retypePass">Re-type Password</label>
             <div className="relative">

@@ -27,7 +27,6 @@ const Register = () => {
     await createUser(data).unwrap();
   };
 
-  // Type guard for handling error as known type
   const isFetchBaseQueryError = (
     error: any
   ): error is { data: { message: string } } => {
@@ -41,10 +40,8 @@ const Register = () => {
 
     if (error) {
       if (isFetchBaseQueryError(error)) {
-        // Safe to access error.data here
         toast.error(error.data.message, { position: "top-center" });
       } else {
-        // Handle other kinds of errors if needed
         toast.error("An unexpected error occurred", { position: "top-center" });
       }
     }

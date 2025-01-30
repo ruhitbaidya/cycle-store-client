@@ -17,7 +17,6 @@ interface IFormInput {
 }
 
 const UpdateProduct = () => {
-  // const [dataDis, setDatsDis] = useState<IFormInput | null>(null);
   const route = useLocation();
 
   const {
@@ -33,12 +32,12 @@ const UpdateProduct = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset, // Import reset
+    reset,
   } = useForm<IFormInput>();
 
   useEffect(() => {
     if (success && data?.data) {
-      reset(data.data); // Reset form with new fetched data
+      reset(data.data);
     }
   }, [success, data, reset]);
 
@@ -64,7 +63,6 @@ const UpdateProduct = () => {
         <Spinnter />
       ) : (
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* Name */}
           <div className="mb-4">
             <label
               htmlFor="name"
@@ -83,7 +81,6 @@ const UpdateProduct = () => {
             )}
           </div>
 
-          {/* Brand */}
           <div className="mb-4">
             <label
               htmlFor="brand"
@@ -102,7 +99,6 @@ const UpdateProduct = () => {
             )}
           </div>
 
-          {/* Price */}
           <div className="mb-4">
             <label
               htmlFor="price"
@@ -121,7 +117,6 @@ const UpdateProduct = () => {
             )}
           </div>
 
-          {/* Type */}
           <div className="mb-4">
             <label
               htmlFor="type"
@@ -145,7 +140,6 @@ const UpdateProduct = () => {
             )}
           </div>
 
-          {/* Description */}
           <div className="mb-4">
             <label
               htmlFor="description"

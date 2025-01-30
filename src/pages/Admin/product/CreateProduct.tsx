@@ -38,7 +38,6 @@ const CreateProduct: React.FC = () => {
       </h2>
       <ToastContainer />
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* Name */}
         <div className="mb-4">
           <label
             htmlFor="name"
@@ -57,7 +56,6 @@ const CreateProduct: React.FC = () => {
           )}
         </div>
 
-        {/* Brand */}
         <div className="mb-4">
           <label
             htmlFor="brand"
@@ -76,7 +74,6 @@ const CreateProduct: React.FC = () => {
           )}
         </div>
 
-        {/* Price */}
         <div className="mb-4">
           <label
             htmlFor="price"
@@ -130,7 +127,6 @@ const CreateProduct: React.FC = () => {
           />
         </div>
 
-        {/* Type */}
         <div className="mb-4">
           <label
             htmlFor="type"
@@ -154,7 +150,6 @@ const CreateProduct: React.FC = () => {
           )}
         </div>
 
-        {/* Description */}
         <div className="mb-4">
           <label
             htmlFor="description"
@@ -174,7 +169,6 @@ const CreateProduct: React.FC = () => {
           )}
         </div>
 
-        {/* In Stock */}
         <div className="mb-4 flex items-center">
           <input
             id="inStock"

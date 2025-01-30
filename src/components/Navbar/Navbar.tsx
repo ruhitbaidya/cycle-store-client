@@ -34,15 +34,11 @@ const Navbar = () => {
           CStore
         </NavLink>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/aboutus">About Us</NavLink>
         </div>
 
-        {/* Shipping Card on the Right (Responsive) */}
-
-        {/* Login/Register Buttons */}
         <div className="hidden md:flex space-x-4">
           {data?.token ? (
             <>
@@ -70,7 +66,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       <div
         className={`fixed top-0 left-0 w-full h-full bg-gray-100 text-gray-900 z-50 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"

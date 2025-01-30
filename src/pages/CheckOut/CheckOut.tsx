@@ -54,12 +54,11 @@ const CheckOut: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center py-10 px-4">
       <div className="w-full max-w-6xl bg-white shadow-lg  overflow-hidden">
-        {/* Header */}
         <div className="bg-[#1ABC9C] text-white text-center py-4">
           <h1 className="text-2xl font-bold">Checkout</h1>
         </div>
         <ToastContainer />
-        {/* Product Details */}
+
         <div className="p-6 bg-gray-100  shadow-md mb-6">
           <h2 className="text-lg font-semibold mb-4">Product Details</h2>
           <div className="space-y-4">
@@ -96,10 +95,7 @@ const CheckOut: React.FC = () => {
           </div>
         </div>
 
-        {/* Billing Details and Order Summary */}
         <div className="p-6 md:flex gap-[30px] items-center md:space-x-6">
-          {/* Billing Details */}
-
           <div className="lg:w-[65%] bg-gray-100 p-6 rounded-lg shadow-md border border-[#1ABC9C]">
             <h2 className="text-lg font-semibold mb-4">Billing Details</h2>
             <form className="space-y-4">
@@ -198,7 +194,6 @@ const CheckOut: React.FC = () => {
             </form>
           </div>
 
-          {/* Order Summary */}
           <div className="lg:w-[35%]">
             <div className=" border border-[#1ABC9C] p-[10px] space-y-4">
               <h2 className="text-center">Order Summary</h2>

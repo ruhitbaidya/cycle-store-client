@@ -40,7 +40,7 @@ const ReadProduct = () => {
             {data &&
               data.data &&
               data.data.length > 0 &&
-              [...data.data] // Create a shallow copy of the data array
+              [...data.data]
                 .sort(
                   (a: any, b: any) =>
                     new Date(b.createdAt).getTime() -

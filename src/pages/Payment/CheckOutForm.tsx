@@ -48,10 +48,6 @@ const CheckOutForm = () => {
 
     const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
-      confirmParams: {
-        // Use `return_url` only if you need to redirect. Avoid it for in-app updates.
-        // return_url: `${window.location.origin}/payment-success`,
-      },
       redirect: "if_required",
     });
 
@@ -59,7 +55,7 @@ const CheckOutForm = () => {
       setMessage(error.message || "An unexpected error occurred.");
     } else if (paymentIntent?.status === "succeeded") {
       setMessage("Payment completed successfully!");
-      openModal(); // Open the success modal
+      openModal();
       const orderData = localStorage.getItem("temData");
       if (orderData) {
         orders(JSON.parse(orderData));
@@ -86,21 +82,19 @@ const CheckOutForm = () => {
         >
           <span id="button-text">{isLoading ? <Spinnter /> : "Pay now"}</span>
         </button>
-        {/* Display the message */}
+
         {message && <div id="payment-message">{message}</div>}
       </form>
       <div className="flex items-center justify-center bg-gray-100">
-        {/* Modal */}
         {isOpen && (
           <div
             className="fixed inset-0 modalsdi bg-opacity-50 flex items-center justify-center z-50"
-            onClick={closeModal} // Close modal on background click
+            onClick={closeModal}
           >
             <div
               className="bg-white rounded-lg shadow-xl w-11/12 max-w-md p-6 relative"
-              onClick={(e) => e.stopPropagation()} // Prevent closing on content click
+              onClick={(e) => e.stopPropagation()}
             >
-              {/* Modal Content */}
               <h2 className="text-xl font-semibold mb-4">Well Come</h2>
               <p className="text-gray-600 mb-4">{message}</p>
               <div className="flex justify-end">

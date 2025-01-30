@@ -38,36 +38,6 @@ const Dashboard = () => {
   };
 
   return (
-    // <div className="flex h-screen container mx-auto bg-gray-100">
-    //   {/* Sidebar */}
-
-    //   {/* Main Content */}
-    //   <div className="flex-1 flex flex-col ml-64">
-    //     {/* Fixed Header */}
-    //     <header className="fixed top-0 left-0 w-full bg-white shadow-md px-4 py-2 z-20 flex items-center justify-between">
-    // <button
-    //   onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-    //   className="text-gray-700 focus:outline-none md:hidden"
-    // >
-    //   <IoMenu />
-    // </button>
-    // <h1 className="text-xl font-semibold text-gray-700">
-    //   Welcome, {data?.data?.name}
-    // </h1>
-    //       <button
-    //         onClick={handelLogOut}
-    //         className="bg-[#1abc9c] text-white px-4 py-2 cursor-pointer"
-    //       >
-    //         Logout
-    //       </button>
-    //     </header>
-
-    //     {/* Main Content Area (scrollable) */}
-    //     <main className="flex-1 mt-[60px] overflow-x-auto">
-    //       <Outlet />
-    //     </main>
-    //   </div>
-    // </div>
     <div>
       <div className="shadow-lg py-[10px] border px-[20px]">
         <div className="container mx-auto px-[5px] lg:px-[20px] flex justify-between items-center">

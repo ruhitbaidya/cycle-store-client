@@ -2,12 +2,13 @@
 import { useAppSelector } from "../../redux/hooks";
 import { useSingalUserQuery } from "../../redux/fetchers/auth/userData";
 import { useChangeNameMutation } from "../../redux/fetchers/auth/changeName";
+import Spinnter from "../../reuseComponents/Spinnter";
 
 const Profile = () => {
   const { email } = useAppSelector(
     (state) => state.auth.user as { email: string }
   );
-  const { data, refetch } = useSingalUserQuery(email);
+  const { data, refetch, isLoading } = useSingalUserQuery(email);
   const [changeName] = useChangeNameMutation();
 
   const handelSubmit = async (e: any) => {
@@ -42,6 +43,7 @@ const Profile = () => {
                   Change Name
                 </button>
               </div>
+              <p className="text-center">{isLoading ? <Spinnter /> : ""}</p>
             </div>
           </div>
         </form>

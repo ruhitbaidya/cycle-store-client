@@ -43,12 +43,12 @@ const Profile = () => {
                   Change Name
                 </button>
               </div>
-              <div className="flex justify-center items-center">
-                <p className="text-center">{isLoading ? <Spinnter /> : ""}</p>
-              </div>
             </div>
           </div>
         </form>
+        <div className="flex justify-center items-center">
+          <p className="text-center">{isLoading ? <Spinnter /> : ""}</p>
+        </div>
       </div>
     </div>
   );

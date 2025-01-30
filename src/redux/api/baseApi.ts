@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { RootState } from "../store";
 const fatchQuery = fetchBaseQuery({
-  baseUrl: "https://cycle-store-three.vercel.app/api",
+  baseUrl: "https://cycle-store-server-gray.vercel.app/api",
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.token;
     if (token) {

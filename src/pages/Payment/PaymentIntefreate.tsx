@@ -18,7 +18,7 @@ const PaymentIntegrate: React.FC = () => {
   }
   const { amount } = data as { amount: number };
   useEffect(() => {
-    fetch("https://cycle-store-three.vercel.app/api/create-payment", {
+    fetch("https://cycle-store-server-gray.vercel.app/api/create-payment", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ price: Math.ceil(amount) }),
